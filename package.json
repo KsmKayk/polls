@@ -4,8 +4,15 @@
   "main": "index.js",
   "author": "Kayk Mascarenhas <kaykdsg@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "tsx watch src/http/server.ts"
+  },
   "devDependencies": {
     "@types/node": "^20.11.16",
+    "tsx": "^4.7.0",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "fastify": "^4.26.0"
   }
 }
