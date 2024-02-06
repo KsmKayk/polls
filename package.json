@@ -1,0 +1,11 @@
+{
+  "name": "polls",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Kayk Mascarenhas <kaykdsg@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "typescript": "^5.3.3"
+  }
+}
