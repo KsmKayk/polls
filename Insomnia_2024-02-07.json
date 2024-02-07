@@ -1,0 +1,196 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2024-02-07T23:03:02.333Z",
+  "__export_source": "insomnia.desktop.app:v8.6.1",
+  "resources": [
+    {
+      "_id": "ws-req_055c43114a444b57830f4abfd7af9b0a",
+      "parentId": "wrk_ff32985355804699821b307d0d63d95c",
+      "modified": 1707345400019,
+      "created": 1707345290029,
+      "name": "Poll Results",
+      "url": "{{ _.wsUrl }}/polls/{% response 'body', 'req_f56164d3291f404d976dfc204f9c512e', 'b64::JC5wb2xsSWQ=::46b', 'never', 60 %}/results",
+      "metaSortKey": -1707345290029,
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.1"
+        }
+      ],
+      "authentication": {},
+      "parameters": [],
+      "pathParameters": [],
+      "settingEncodeUrl": true,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingFollowRedirects": "global",
+      "description": "",
+      "_type": "websocket_request"
+    },
+    {
+      "_id": "wrk_ff32985355804699821b307d0d63d95c",
+      "parentId": null,
+      "modified": 1707182773126,
+      "created": 1707182773126,
+      "name": "NLW Expert NODE",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_7cbd711bdc2c404b9312f3410d3f4255",
+      "parentId": "wrk_ff32985355804699821b307d0d63d95c",
+      "modified": 1707346666629,
+      "created": 1707268703608,
+      "url": "{{ _.baseUrl }}/polls/{% response 'body', 'req_f56164d3291f404d976dfc204f9c512e', 'b64::JC5wb2xsSWQ=::46b', 'never', 60 %}/votes",
+      "name": "Vote On Poll",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"pollOptionId\":\"{% response 'body', 'req_28a69b94c86740fb8c084cfec6151e27', 'b64::JC5wb2xsLm9wdGlvbnNbMF0uaWQ=::46b', 'never', 60 %}\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1707268703608,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_28a69b94c86740fb8c084cfec6151e27",
+      "parentId": "wrk_ff32985355804699821b307d0d63d95c",
+      "modified": 1707267586851,
+      "created": 1707267472145,
+      "url": "{{ _.baseUrl }}/polls/{% response 'body', 'req_f56164d3291f404d976dfc204f9c512e', 'b64::JC5wb2xsSWQ=::46b', 'never', 60 %}",
+      "name": "Get Poll",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1707267472145,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_f56164d3291f404d976dfc204f9c512e",
+      "parentId": "wrk_ff32985355804699821b307d0d63d95c",
+      "modified": 1707267130750,
+      "created": 1707182836863,
+      "url": "{{ _.baseUrl }}/polls",
+      "name": "Create Poll",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"title\":\"Enquete Teste\",\n\t\"options\":[\"opção 1\", \"opção 2\"]\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        },
+        {
+          "name": "User-Agent",
+          "value": "insomnia/8.6.0"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1707182836863,
+      "isPrivate": false,
+      "pathParameters": [],
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_1557768cf3e893b611cf618f898e207b1c5af580",
+      "parentId": "wrk_ff32985355804699821b307d0d63d95c",
+      "modified": 1707345393151,
+      "created": 1707182773128,
+      "name": "Base Environment",
+      "data": {
+        "baseUrl": "http://localhost:3333",
+        "wsUrl": "ws://localhost:3333"
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "baseUrl",
+          "wsUrl"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1707182773128,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_1557768cf3e893b611cf618f898e207b1c5af580",
+      "parentId": "wrk_ff32985355804699821b307d0d63d95c",
+      "modified": 1707346558196,
+      "created": 1707182773130,
+      "name": "Default Jar",
+      "cookies": [
+        {
+          "key": "sessionId",
+          "value": "d2a0604d-cb90-4652-8a3d-884350b30203.lGxIspMpeyzf%2FwezPmpljcxvxYngFV%2FpVuWHnvEbZe0",
+          "maxAge": 2592000,
+          "domain": "localhost",
+          "path": "/",
+          "httpOnly": true,
+          "hostOnly": true,
+          "creation": "2024-02-07T22:55:58.195Z",
+          "lastAccessed": "2024-02-07T22:55:58.195Z",
+          "id": "6464a678-753b-4dc1-9a33-9a0bb1d431c6"
+        }
+      ],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "ws-payload_6fcc365ba77c4e36816f7572e9e12054",
+      "parentId": "ws-req_055c43114a444b57830f4abfd7af9b0a",
+      "modified": 1707345448646,
+      "created": 1707345444452,
+      "name": "New Payload",
+      "value": "",
+      "mode": "application/json",
+      "_type": "websocket_payload"
+    }
+  ]
+}

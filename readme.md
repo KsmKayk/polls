@@ -27,3 +27,68 @@ Project idea is made by [Rocketseat 💜](https://rocketseat.com.br/).
 7. Access the API with the REST Client
    - `localhost:3333/polls` 
 8. Enjoy!
+
+### Extra Step for Insomnia Users
+- Import the `Insomnia_2024-02-07.json` file to your Insomnia, it will make all route request spaces.
+
+## Routes
+- `POST /polls` - Create a new poll
+  - Request body:
+    ```json
+    {
+      "title": "What is your favorite programming language?",
+      "options": [
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "Java"
+      ]
+    }
+    ```
+  - Response body:
+   ```json
+   {
+      "pollId":"uuid"
+   }
+   ```
+
+- `GET /polls/:pollId` - Get data from a poll
+  - Response body:
+    ```json
+    {
+      "id": "uuid",
+      "title": "What is your favorite programming language?",
+      "options": [
+        {
+          "id": "uuid",
+          "title": "JavaScript",
+          "score": 0
+        },
+        {
+          "id": "uuid",
+          "title": "TypeScript",
+          "score": 0
+        },
+        {
+          "id": "uuid",
+          "title": "Python",
+          "score": 0
+        },
+        {
+          "id": "uuid",
+          "title": "Java",
+          "score": 0
+        }
+      ]
+    }
+    ```
+
+- `POST /polls/:pollId/votes` - Vote on a poll
+  - Request body:
+    ```json
+    {
+      "poolOptionId": "uuid"
+    }
+    ```
+
+- `WS /polls/:pollId/results` - Real-time poll results
